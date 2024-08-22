@@ -1,0 +1,21 @@
+:root{
+  --azul-claro: #003CCD;
+  --azul-escuro: #001e67;
+  --azul-preto: #010112;
+  --dourado: #ffc250;
+  --amarelo: #FFD700;
+  --roxo: #820080;
+  --branco: #F4F4F4;
+  --branco-escuro: #D9D9D9;
+  --fonte-open: "Open Sans", sans-serif;
+  --fonte-roboto: "Roboto", sans-serif;
+  --fonte-sora: "Sora", sans-serif;
+  --fonte-space: "Space Grotesk", sans-serif;
+
+
+
+}
+.app{
+  display: flex;
+  flex-direction: column;
+}

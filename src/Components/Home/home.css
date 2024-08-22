@@ -1,0 +1,63 @@
+.home{
+    background-image: url(../../../public/images/home-background.png);
+    background-color: #010112;
+    height: 100vh;
+    width: 100%;
+    background-repeat: none;
+    background-size:cover;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.home-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10rem;
+    flex-direction: column;
+}
+
+.home-title{
+    color: var(--branco);
+    font-family: var(--fonte-space);
+    font-size: 3.5rem;
+    height: auto;
+    width: 60%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.home-subtitle{
+padding-top: 8rem;
+width: 40%;
+height: auto;
+color: var(--branco-escuro);
+display: flex;
+text-align: center;
+font-family: var(--fonte-roboto);
+font-size: 1.2rem;
+font-weight: 300;
+
+}
+
+.home-button{
+height: 3rem;
+padding-top: 8rem;
+
+}
+.home-button button{
+    height: 2.5rem;
+    width: 18rem;
+    background-color: var(--dourado);
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-family: var(--fonte-roboto);
+    transition: 1s ease;
+}
+
+.home-button button:hover{
+color: var(--branco);
+transition: 1s ease;
+}
