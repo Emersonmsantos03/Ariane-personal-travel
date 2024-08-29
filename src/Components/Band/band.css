@@ -1,5 +1,5 @@
-.band{
-    height: 10vh;
+.band {
+    height: 4rem; /* Permitir que a altura ajuste conforme o conteúdo */
     background-color: var(--azul-escuro);
     display: flex;
     align-items: center;
@@ -9,33 +9,66 @@
     font-family: var(--fonte-roboto);
     font-size: 1.3rem;
     color: #FFFFFF;
-
+    padding: 2rem 1rem; /* Adicionar algum padding para melhor espaçamento */
 }
 
-
-
-.band strong{
+.band strong {
     color: var(--dourado);
 }
 
-
-.band-companies{
+.band-companies {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    height: 3.5rem;
-    
+    height: auto; /* Permitir que a altura ajuste conforme o conteúdo */
+    flex-wrap: wrap; /* Permitir quebra de linha para dispositivos menores */
 }
 
-.band-companies img{
-    height: auto;
-    
+.band-companies img {
+    height: 3rem; /* Definir uma altura fixa para as imagens */
+    max-width: 100%; /* Garantir que a imagem não exceda o container */
+    object-fit: contain; /* Manter a proporção das imagens */
 }
 
-.band-title{
-    height: 2rem;
+.band-title {
+    margin-bottom: 1rem; /* Adicionar margem inferior para espaçamento */
 }
 
+/* Responsividade para telas médias e smartphones */
+@media (max-width: 1024px) {
+    .band {
+        font-size: 1.1rem; /* Reduzir o tamanho da fonte */
+        padding: 1.5rem 1rem; /* Ajustar o padding */
+    }
 
+    .band-companies {
+        gap: 2rem; /* Reduzir o espaçamento entre as imagens */
+    }
+
+    .band-companies img {
+        height: 2.5rem; /* Ajustar a altura das imagens */
+    }
+}
+
+@media (max-width: 768px) {
+    .band {
+        font-size: 1rem; /* Reduzir ainda mais o tamanho da fonte */
+        padding: 1rem 0.5rem;
+        padding-bottom: 2rem;
+         /* Ajustar o padding */
+    }
+
+    .band-title {
+        font-size: 1rem; /* Ajustar o tamanho da fonte do título */
+    }
+
+    .band-companies {
+        gap: 1.5rem; /* Reduzir o espaçamento entre as imagens */
+    }
+
+    .band-companies img {
+        height: 2rem; /* Ajustar a altura das imagens */
+    }
+}

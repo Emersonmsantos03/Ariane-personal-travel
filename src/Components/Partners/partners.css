@@ -1,0 +1,145 @@
+.partners {
+    height: 140vh;
+    background-color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.partners-cards {
+    height: 60vh;
+    width: 40%;
+    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 5rem;
+}
+
+.card-part {
+    background-color: rgba(198, 208, 233, 1);
+    height: 50%;
+    width: 40%;
+    border-radius: 30px;
+    padding: 1rem;
+}
+
+.card-part img {
+    height: 3rem;
+}
+
+.card-title {
+    color: var(--azul-escuro);
+    font-family: var(--fonte-open);
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding-top: 2rem;
+}
+
+.card-text {
+    padding-top: 1rem;
+    font-family: var(--fonte-open);
+    font-weight: 400;
+    line-height: 1.2rem;
+}
+
+.partners-join {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+    padding-top: 15rem;
+}
+
+.partners-join-title {
+    font-family: var(--fonte-open);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--azul-escuro);
+}
+
+.partners-join-subtitle {
+    font-family: var(--fonte-open);
+    font-size: 1rem;
+    width: 25%;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.partners-join-enter {
+    font-size: 1.3rem;
+    font-family: var(--fonte-roboto);
+    color: var(--azul-escuro);
+    font-weight: 600;
+}
+
+.partners-join-enter img {
+    height: 0.8rem;
+}
+
+/* Ajustes para telas médias */
+@media (max-width: 1024px) {
+    .partners-cards {
+        width: 60%;
+    }
+
+    .card-part {
+        width: 45%;
+        height: auto; /* Ajusta a altura para caber em colunas */
+    }
+
+    .partners-join-subtitle {
+        width: 40%;
+        font-size: 1.1rem;
+    }
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 768px) {
+    .partners{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+        height: 210vh;
+    }
+    .partners-cards {
+        width: 90%;
+        height: auto;
+        padding-top: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-part {
+        width: 100%;
+        height: auto; /* Ajusta a altura para caber em colunas */
+        padding: 2rem;
+    }
+
+    .partners-join-title {
+        font-size: 1.5rem;
+    }
+
+    .partners-join-subtitle {
+        width: 90%;
+        font-size: 1rem;
+    }
+    .partners-join{
+        padding-top: 5rem;
+    }
+
+    .partners-join-enter {
+        font-size: 1.1rem;
+    }
+
+    .card-title {
+        font-size: 1.4rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+}

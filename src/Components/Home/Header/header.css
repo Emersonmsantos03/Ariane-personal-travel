@@ -1,61 +1,139 @@
-.header{
+.header {
     display: flex;
     flex-direction: row;
     height: 12vh;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     font-family: var(--fonte-roboto);
     font-size: 20px;
     font-weight: 300;
     color: #FFFFFF;
+    padding: 0 2rem;
 }
 
-.header-logo{
+.header-logo {
     width: 40%;
-   
 }
-.header-logo img{
-    height:7rem;
+.header-nav-a:hover{
+    color: var(--dourado);
+
+}
+
+.header-logo img {
+    height: 7rem;
     padding-left: 10rem;
 }
 
-.header-nav{
+.header-nav {
     display: flex;
-    width: 60%;
     gap: 7rem;
-
 }
-.header-nav a{
-    transition: 1s ease;
+
+.header-nav a {
     display: flex;
     align-items: center;
-    text-align: center;
     justify-content: center;
+    text-align: center;
+    transition: 1s ease;
 }
 
-.header-nav a:hover{
-color: var(--dourado);
-transition: 1s ease;
-
+.header-nav a:hover {
+    
+    transition: 1s ease;
 }
 
-.header-nav-button{
+.header-nav-button {
     width: 160px;
     height: 30px;
-    background-color: var(--dourado);
+    background-color: var(--dourado); /* Remover fundo do botão Contatos */
     border-radius: 20px;
-    border: none;
-    color: #010112;
+    border: 2px solid var(--dourado); /* Adiciona uma borda dourada */
+    color: #000000;
     font-size: 20px;
     font-weight: 300;
-    
-    
+    transition: color 0.3s ease, border-color 0.3s ease;
 }
 
-.header-nav-button:hover,  .header-nav-button a:hover{
-    color: #010112;
+/* Estilos do menu hambúrguer e navegação para mobile */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 1000; /* Certifique-se de que o botão está sobre o menu */
 }
 
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: #FFFFFF;
+}
 
+/* Estilos para telas maiores */
+@media (max-width: 1024px) {
+    .header {
+        padding: 0 1rem;
+    }
 
+    .header-logo {
+        width: 50%;
+        padding-left: 2rem;
+    }
 
+    .header-nav {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 20vh;
+    }
+
+    .header-logo img {
+        height: 5rem;
+        padding-left: 1rem;
+    }
+
+    .header-nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 999; /* Certifique-se de que o menu está acima do conteúdo */
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para dar mais destaque */
+    }
+
+    .header-nav.open {
+        transform: translateX(0);
+    }
+
+    .header-nav a {
+        padding: 1.5rem 0; /* Espaçamento entre os itens */
+        color: #FFFFFF;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-nav-button {
+        width: 140px;
+        height: 25px;
+        border: none;
+        background-color: transparent; /* Remover fundo do botão Contatos */
+        color: #FFFFFF; /* Certifique-se de que o texto esteja visível */
+    }
+}

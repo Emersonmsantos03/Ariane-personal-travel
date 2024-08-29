@@ -1,73 +1,144 @@
-.about{
-    height: 60vh;
+.about {
+    height: auto; /* Permitir que a altura ajuste conforme o conteúdo */
     display: flex;
     flex-direction: row;
-    padding: 15rem 10rem;
+    padding: 5rem 2rem; /* Ajustar padding para telas menores */
     color: white;
     justify-content: center;
-    gap: 3rem;
+    gap: 2rem; /* Reduzir o espaço entre os elementos */
+    flex-wrap: wrap; /* Permitir quebra de linha */
 }
 
 .about strong {
     color: var(--dourado);
 }
 
-.about-image{
+.about-image {
     display: flex;
-    width: 35%;
-    justify-content: right;
-
-}
-.about-image img{
-    height: 90%;
-    width: auto;
+    width: 100%;
+    justify-content: center;
 }
 
-.about-texts{
-    width: 45%;
+.about-image img {
+    height: auto; /* Ajusta a altura automaticamente */
+    width: 100%;
+    max-width: 400px; /* Limitar a largura máxima da imagem */
 }
 
-.about-texts-title{
-    height: 3rem;
-    font-family: var(--fonte-open);
-    font-size: 2rem;
-    font-weight: 400;
-}
-
-.about-texts-para{
-    font-size: 1rem;
-    font-family: var(--fonte-roboto);
-    font-weight: 300;
-    line-height: 1.2rem;
-    color: #D9D9D9;
-    gap: 1.5rem;
+.about-texts {
+    width: 100%;
+    max-width: 600px; /* Limitar a largura máxima do texto */
     display: flex;
     flex-direction: column;
-    width: 80%;
 }
 
-.about-texts-subtitle{
-    padding-top: 2rem;
+.about-texts-title {
+    height: auto; /* Ajustar altura automaticamente */
+    font-family: var(--fonte-open);
+    font-size: 2rem; /* Ajustar o tamanho da fonte */
+    font-weight: 600;
+    text-align: center; /* Centralizar o texto */
+}
+
+.about-texts-para {
+    font-size: 1rem; /* Manter o tamanho da fonte */
+    font-family: var(--fonte-roboto);
+    font-weight: 300;
+    line-height: 1.5rem; /* Ajustar a altura da linha */
+    color: #D9D9D9;
+    gap: 1rem; /* Reduzir o espaço entre os parágrafos */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 2rem; /* Centralizar o texto */
+}
+
+.about-texts-subtitle {
+    padding-top: 1.5rem; /* Reduzir o padding superior */
     font-family: var(--fonte-roboto);
     color: var(--amarelo);
+    text-align: center; /* Centralizar o texto */
 }
 
-.about-texts-social{
-    padding-top: 2rem;
-    height: 2rem;
+.about-texts-social {
+    padding-top: 1.5rem; /* Reduzir o padding superior */
     display: flex;
     flex-direction: row;
+    justify-content: center; /* Centralizar os ícones sociais */
     gap: 1rem;
 }
 
-.about-texts-social img{
-    height: 2rem;
+.about-texts-social img {
+    height: 1.5rem; /* Ajustar a altura dos ícones sociais */
 }
 
+/* Responsividade para telas médias e smartphones */
+@media (max-width: 1024px) {
+    .about {
+        padding: 4rem 2rem; /* Ajustar o padding */
+        flex-direction: column; /* Empilhar verticalmente */
+    }
 
+    .about-image {
+        width: 80%;
+        margin-bottom: 2rem; /* Adicionar margem inferior */
+    }
 
+    .about-texts {
+        width: 80%;
+        max-width: none; /* Remover largura máxima */
+    }
 
-.about-texts{
-    display: flex;
-    flex-direction: column;
+    .about-texts-title {
+        font-size: 1.2rem; /* Ajustar o tamanho da fonte */
+    }
+
+    .about-texts-para {
+        font-size: 0.9rem; /* Ajustar o tamanho da fonte */
+    }
+
+    .about-texts-subtitle {
+        font-size: 1rem; /* Ajustar o tamanho da fonte */
+    }
+
+    .about-texts-social img {
+        height: 1.5rem; /* Ajustar a altura dos ícones sociais */
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 3rem 1rem; /* Ajustar o padding */
+    }
+
+    .about-image {
+        width: 100%;
+        margin-bottom: 1rem; /* Adicionar margem inferior */
+    }
+
+    .about-texts {
+        width: 100%;
+    }
+
+    .about-texts-title {
+        font-size: 1.5rem;
+        padding-bottom: 2rem; /* Ajustar o tamanho da fonte */
+    }
+
+    .about-texts-para {
+        font-size: 1rem; /* Ajustar o tamanho da fonte */
+        line-height: 1.4rem; /* Ajustar a altura da linha */
+    }
+
+    .about-texts-subtitle {
+        font-size: 1.2rem; /* Ajustar o tamanho da fonte */
+    }
+
+    .about-texts-social {
+        gap: 0.5rem; /* Reduzir o espaço entre os ícones sociais */
+    }
+
+    .about-texts-social img {
+        height: 1.5rem; /* Ajustar a altura dos ícones sociais */
+    }
 }

@@ -1,0 +1,401 @@
+/* Estilo padrão (para telas maiores) */
+.planning {
+    height: 220vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.planning strong {
+    color: var(--dourado);
+}
+
+.planning-image {
+    height: 100vh;
+}
+
+.planning-image img {
+    height: 40vh;
+}
+
+.planning-title, .planning-title2 {
+    height: 10vh;
+    font-family: var(--fonte-open);
+    color: var(--branco);
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 4rem;
+}
+
+.planning-title2 {
+    width: 50%;
+    text-align: center;
+    padding-top: 15rem;
+}
+
+.planning-plan {
+    display: flex;
+    flex-direction: row;
+    height: 20vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    color: var(--branco);
+    font-family: var(--fonte-sora);
+    font-size: 1.2rem;
+    padding-top: 5rem;
+}
+
+.planning-plan img {
+    height: 2.5rem;
+}
+
+.planning-plan-top, .planning-plan-bot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.planning-plan-bot {
+    padding-top: 3rem;
+}
+
+.planning-subtitle {
+    color: var(--branco);
+    font-family: var(--fonte-open);
+    font-size: 1rem;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 5rem;
+}
+
+.planning-subtitle h3 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.planning-subtitle img {
+    height: 2rem;
+}
+
+/* Carousel Styles */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+    padding-top: 10rem;
+}
+
+.carousel-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    padding-top: 25rem;
+    gap: 2rem;
+    padding-bottom: 50rem;
+}
+
+.carousel-card {
+    min-width: calc(55% / 3);
+    max-width: calc(55% / 3);
+    margin: 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding-top: 2rem;
+    height: 20rem;
+    padding-top: 2rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-card img {
+    height: 1rem;
+}
+
+.carousel-card h4 {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    font-family: var(--fonte-open);
+    color: var(--azul-escuro);
+    font-weight: 700;
+}
+
+.carousel-card p {
+    padding-top: 2rem;
+    font-size: 1.2rem;
+    font-family: var(--fonte-roboto);
+    width: 90%;
+    text-align: center;
+}
+
+.carousel-control {
+    border: none;
+    color: var(--branco);
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-control img {
+    height: 1.5rem;
+    height: 3rem;
+}
+
+.carousel-control.prev {
+    left: 15rem;
+    padding-bottom: 42rem;
+    background-color: transparent;
+}
+
+.carousel-control.next {
+    right: 15rem;
+    padding-bottom: 42rem;
+    background-color: transparent;
+}
+
+/* Responsividade para telas médias e smartphones */
+@media (max-width: 1024px) {
+    .planning {
+        height: auto; /* Ajustar altura para telas médias */
+    }
+
+    .planning-image img {
+        height: 30vh; /* Reduzir a altura da imagem */
+    }
+
+    .planning-title, .planning-title2 {
+        height: auto;
+        font-size: 1.5rem; /* Reduzir o tamanho da fonte */
+        padding-bottom: 2rem;
+    }
+
+    .planning-title2 {
+        width: 80%;
+        padding-top: 10rem; /* Reduzir o padding superior */
+    }
+
+    .planning-plan {
+        height: auto;
+        flex-direction: column; /* Alterar direção para coluna em telas menores */
+        align-items: flex-start;
+        gap: 2rem;
+        padding-top: 2rem;
+        font-size: 1rem; /* Reduzir o tamanho da fonte */
+    }
+
+    .planning-plan img {
+        height: 2rem; /* Reduzir o tamanho das imagens */
+    }
+
+    .planning-subtitle {
+        height: auto;
+        font-size: 0.9rem; /* Reduzir o tamanho da fonte */
+        padding-top: 3rem;
+    }
+
+    .planning-subtitle h3 {
+        font-size: 1.5rem; /* Reduzir o tamanho da fonte */
+    }
+
+    .planning-subtitle img {
+        height: 1.5rem; /* Reduzir o tamanho das imagens */
+    }
+
+    .carousel-container {
+        width: 80%; /* Ajustar a largura do carousel */
+    }
+
+    .carousel-content {
+        padding-top: 15rem; /* Ajustar o padding superior */
+        padding-bottom: 30rem; /* Ajustar o padding inferior */
+    }
+
+    .carousel-card {
+        min-width: calc(80% / 3); /* Ajustar a largura dos cartões */
+        max-width: calc(80% / 3);
+        height: auto; /* Ajustar altura conforme o conteúdo */
+    }
+
+    .carousel-card img {
+        height: 1.5rem; /* Reduzir o tamanho das imagens */
+    }
+
+    .carousel-card h4 {
+        font-size: 1.2rem; /* Reduzir o tamanho da fonte */
+    }
+
+    .carousel-card p {
+        font-size: 1rem; /* Reduzir o tamanho da fonte */
+    }
+
+    .carousel-control {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    .carousel-control img {
+        height: 1rem; /* Reduzir o tamanho das imagens dos controles */
+    }
+}
+
+@media (max-width: 768px) {
+    .planning {
+        height: auto; /* Ajustar altura para dispositivos menores */
+        padding: 10rem 1rem; /* Adicionar padding */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .planning h1{
+        text-align: center;
+    }
+
+    .planning-image img {
+        height: 15vh;
+    }
+    .planning-image{
+        height: auto;
+    }
+
+    .planning-title, .planning-title2 {
+        font-size: 1.2rem; /* Reduzir o tamanho da fonte */
+        padding-bottom: 1.5rem;
+    }
+
+    .planning-title2 {
+        width: 90%;
+        padding-top: 8rem; /* Reduzir o padding superior */
+    }
+
+    .planning-plan {
+        flex-direction: column;
+        gap: 2rem;
+        padding-top: 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .planning-plan-bot{
+        padding: 0;
+    }
+
+    .planning-plan img {
+        height: 1.5rem; /* Reduzir o tamanho das imagens */
+    }
+
+    .planning-subtitle {
+        font-size: 0.8rem; /* Reduzir o tamanho da fonte */
+        padding-top: 2rem;
+    }
+
+    .planning-subtitle h3 {
+        font-size: 1.2rem; /* Reduzir o tamanho da fonte */
+    }
+
+    .planning-subtitle img {
+        height: 1rem; /* Reduzir o tamanho das imagens */
+    }
+
+    .carousel-container {
+        width: 100%; /* Ajustar a largura do carousel */
+    }
+
+    .carousel-content {
+        padding-top: 10rem; /* Ajustar o padding superior */
+        padding-bottom: 20rem; /* Ajustar o padding inferior */
+    }
+
+    .carousel-card {
+        min-width: 100%; /* Ajustar largura dos cartões */
+        height: auto; /* Ajustar altura conforme o conteúdo */
+    }
+
+    .carousel-card img {
+        height: 1rem; /* Reduzir o tamanho das imagens */
+    }
+
+    .carousel-card h4 {
+        font-size: 1rem; /* Reduzir o tamanho da fonte */
+    }
+
+    .carousel-card p {
+        font-size: 0.9rem; /* Reduzir o tamanho da fonte */
+    }
+
+    .carousel-control {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .carousel-control img {
+        height: 0.75rem; /* Reduzir o tamanho das imagens dos controles */
+    }
+
+    .carousel-container {
+        padding-top: 2rem; /* Reduz o padding superior */
+    }
+
+    .carousel-content {
+        padding-top: 5rem; /* Reduz o padding superior */
+        padding-bottom: 15rem;
+        gap: 1rem; /* Reduz o padding inferior */
+    }
+
+    .carousel-card {
+        min-width: 20%; /* Ajusta a largura dos cartões */
+        max-width: 90%;
+        height: auto; /* Ajusta a altura dos cartões */
+    }
+
+    .carousel-control {
+        font-size: 1.5rem; /* Reduz o tamanho dos ícones de controle */
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    .carousel-control img {
+        height: 3rem; /* Ajusta o tamanho das imagens de controle */
+    }
+    .carousel-control.prev {
+        left: 5rem;
+        padding-top: 25rem;
+        background-color: transparent;
+        background: none;
+    }
+    
+    .carousel-control.next {
+        right: 5rem;
+        padding-top: 25rem;
+        background-color: transparent;
+    }
+}

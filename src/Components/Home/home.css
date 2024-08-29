@@ -1,16 +1,15 @@
-.home{
+.home {
     background-image: url(../../../public/images/home-background.png);
     background-color: #010112;
     height: 100vh;
     width: 100%;
-    background-repeat: none;
-    background-size:cover;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
-    
 }
 
-.home-container{
+.home-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,35 +17,32 @@
     flex-direction: column;
 }
 
-.home-title{
+.home-title {
     color: var(--branco);
     font-family: var(--fonte-space);
     font-size: 3.5rem;
-    height: auto;
     width: 60%;
     text-align: center;
     font-weight: 500;
 }
 
-.home-subtitle{
-padding-top: 8rem;
-width: 40%;
-height: auto;
-color: var(--branco-escuro);
-display: flex;
-text-align: center;
-font-family: var(--fonte-roboto);
-font-size: 1.2rem;
-font-weight: 300;
-
+.home-subtitle {
+    padding-top: 8rem;
+    width: 40%;
+    color: var(--branco-escuro);
+    display: flex;
+    text-align: center;
+    font-family: var(--fonte-roboto);
+    font-size: 1.2rem;
+    font-weight: 300;
 }
 
-.home-button{
-height: 3rem;
-padding-top: 8rem;
-
+.home-button {
+    height: 3rem;
+    padding-top: 8rem;
 }
-.home-button button{
+
+.home-button button {
     height: 2.5rem;
     width: 18rem;
     background-color: var(--dourado);
@@ -54,10 +50,57 @@ padding-top: 8rem;
     border-radius: 20px;
     font-size: 1rem;
     font-family: var(--fonte-roboto);
+    transition: background-color 0.3s ease, color 0.3s ease;
     transition: 1s ease;
 }
 
-.home-button button:hover{
-color: var(--branco);
-transition: 1s ease;
+.home-button button:hover {
+    background-color: var(--amarelo); /* Muda a cor de fundo ao passar o mouse */
+    transition: 1s ease;
+    cursor: pointer;
+}
+
+/* Responsividade para telas médias e smartphones */
+@media (max-width: 1024px) {
+    .home-title {
+        font-size: 2.5rem; /* Reduz o tamanho da fonte */
+        width: 80%;
+    }
+
+    .home-subtitle {
+        width: 60%;
+        font-size: 1rem; /* Ajusta o tamanho da fonte */
+    }
+
+    .home-button button {
+        width: 15rem; /* Reduz a largura do botão */
+    }
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        padding-top: 0rem; /* Reduz o padding superior */
+    }
+
+    .home-title {
+        font-size: 1.8rem; /* Ajusta o tamanho da fonte para telas menores */
+        width: 90%;
+        padding-top: 10rem;
+    }
+
+    .home-subtitle {
+        width: 80%;
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+        padding-top: 3rem; /* Ajusta o padding superior */
+    }
+
+    .home-button {
+        padding-top: 3rem;
+        width: 100; /* Ajusta o padding superior */
+    }
+
+    .home-button button {
+        width: 16rem; /* Reduz a largura do botão */
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+    }
 }
