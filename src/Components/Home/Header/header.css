@@ -61,6 +61,8 @@
     cursor: pointer;
     gap: 5px;
     z-index: 1000; /* Certifique-se de que o botão está sobre o menu */
+    position: fixed;
+    left: 90%;
 }
 
 .hamburger .line {

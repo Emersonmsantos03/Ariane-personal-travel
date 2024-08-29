@@ -172,6 +172,8 @@ a {
   }
   .bigcard-container button{
     margin-bottom: 2rem;
+    width: 100%;
+    font-size: 1.1rem;
   }
 
   .bigcard-container a {

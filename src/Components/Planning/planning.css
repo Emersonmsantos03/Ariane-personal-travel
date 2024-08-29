@@ -141,10 +141,11 @@
 
 .carousel-card p {
     padding-top: 2rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: var(--fonte-roboto);
     width: 90%;
     text-align: center;
+    line-height: 1.1rem;
 }
 
 .carousel-control {
@@ -374,7 +375,8 @@
     .carousel-card {
         min-width: 20%; /* Ajusta a largura dos cartões */
         max-width: 90%;
-        height: auto; /* Ajusta a altura dos cartões */
+        height: auto;
+        padding-bottom: 1rem; /* Ajusta a altura dos cartões */
     }
 
     .carousel-control {
@@ -388,14 +390,14 @@
     }
     .carousel-control.prev {
         left: 5rem;
-        padding-top: 25rem;
+        padding-top: 8rem;
         background-color: transparent;
         background: none;
     }
     
     .carousel-control.next {
         right: 5rem;
-        padding-top: 25rem;
+        padding-top: 8rem;
         background-color: transparent;
     }
 }

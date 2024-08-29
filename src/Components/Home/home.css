@@ -35,6 +35,7 @@
     font-family: var(--fonte-roboto);
     font-size: 1.2rem;
     font-weight: 300;
+    line-height: 1.4rem;
 }
 
 .home-button {
@@ -43,19 +44,19 @@
 }
 
 .home-button button {
-    height: 2.5rem;
-    width: 18rem;
-    background-color: var(--dourado);
+    height: 2.8rem;
+    width: 20rem;
+    background-color: var(--amarelo);
     border: none;
     border-radius: 20px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family: var(--fonte-roboto);
     transition: background-color 0.3s ease, color 0.3s ease;
     transition: 1s ease;
 }
 
 .home-button button:hover {
-    background-color: var(--amarelo); /* Muda a cor de fundo ao passar o mouse */
+    background-color: var(--dourado); /* Muda a cor de fundo ao passar o mouse */
     transition: 1s ease;
     cursor: pointer;
 }
